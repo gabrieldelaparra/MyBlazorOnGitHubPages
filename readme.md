@@ -147,7 +147,6 @@ jobs:
 
       # Publish the website
       - name: GitHub Pages action
-        # if: ${{ github.ref == 'refs/heads/master' }} # Publish only when the push is on master
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
@@ -165,5 +164,7 @@ jobs:
 ![Check that all Actions pass](2020-08-04-17-44-27.png)
 2. Go to our repository `Settings`, `Options` and scroll down to `Github Pages`. Enable it, select the newly created `gh-pages` branch and select the `\` path.
 ![Set your github pages](2020-08-04-17-44-55.png)
+
+Wait a minute or two and check your page as in the image above.
 
 Voilà.
