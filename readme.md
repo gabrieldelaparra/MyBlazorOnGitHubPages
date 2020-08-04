@@ -16,7 +16,13 @@ What you need to do:
 
 1. Create a github repository. It can have any name: such as `MyBlazorOnGitHubPages`. We will use this name later on.
 2. Go to [https://github.com/settings/tokens] and create a token. Name it whatever you want. Add `repo` to the scopes. Copy it to your clipboard.
-3. Go to your repository: `Settings` > `Secrets` and create a secret called `PUBLISH_TOKEN` and paste your token.
+
+![Token creation](2020-08-04-17-46-48.png)
+
+3. Go to your repository: `Settings` > `Secrets` and create a secret called `PUBLISH_TOKEN` and paste your token. (In my case it is called differently, but you have to change it in the `yml` file below):
+
+![Add your secret](2020-08-04-17-46-01.png)
+
 4. There is an additional step in the end (Set github pages to use the `gh-pages` branch, on the root.) 
 
 ## Local
@@ -155,7 +161,9 @@ jobs:
 
 ## Back to Github
 
-1. Go to `Actions` and check that the build passes.
+1. Go to `Actions` and check that the build passes:
+![Check that all Actions pass](2020-08-04-17-44-27.png)
 2. Go to our repository `Settings`, `Options` and scroll down to `Github Pages`. Enable it, select the newly created `gh-pages` branch and select the `\` path.
+![Set your github pages](2020-08-04-17-44-55.png)
 
 Voilà.
