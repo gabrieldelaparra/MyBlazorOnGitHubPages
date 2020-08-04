@@ -1,18 +1,26 @@
-# How to publish a Blazor app to github pages.
+# How to publish a Blazor app to github pages
+
 I started from these 2 tutorials:
+
 - [https://www.davideguida.com/how-to-deploy-blazor-webassembly-on-github-pages-using-github-actions/]
 - [https://www.meziantou.net/publishing-a-blazor-webassembly-application-to-github-pages.htm]
 
 But I could not run it with both, but a mix of both.
 
+And I was specially confused about this post: [https://stackoverflow.com/questions/56719533/why-does-my-blazor-page-result-in-404-errors-on-github-pages] about adding the full path and renaming the `_framework` and `_bin` folders.
+So I decided to create this. Maybe it could help others.
+
 What you need to do:
-## Github:
+
+## Github
+
 1. Create a github repository. It can have any name: such as `MyBlazorOnGitHubPages`. We will use this name later on.
 2. Go to [https://github.com/settings/tokens] and create a token. Name it whatever you want. Add `repo` to the scopes. Copy it to your clipboard.
 3. Go to your repository: `Settings` > `Secrets` and create a secret called `PUBLISH_TOKEN` and paste your token.
 4. There is an additional step in the end (Set github pages to use the `gh-pages` branch, on the root.) 
 
-## Local:
+## Local
+
 1. Create a `Blazor App` Make it a `Blazor Webassembly App`. Do NOT check `ASP.NET Core hosted`. (Not sure about `PWA`, I did not try that). You can add this project into an existing solution, that makes no difference.
 2. Add the following javascript code in the `body` of your `wwwroot/index.html`
 
@@ -145,7 +153,8 @@ jobs:
 
 8. Commit and push
 
-## Back on Github
+## Back to Github
+
 1. Go to `Actions` and check that the build passes.
 2. Go to our repository `Settings`, `Options` and scroll down to `Github Pages`. Enable it, select the newly created `gh-pages` branch and select the `\` path.
 
