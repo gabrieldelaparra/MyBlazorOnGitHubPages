@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      //It is not working. As of 08.Aug.2020, base href does not work with debugging on VSCode.
+      //It is not working. As of 05.Aug.2020, base href does not work with debugging on VSCode.
       "type": "blazorwasm",
       "name": "Launch and Debug Blazor WebAssembly Application",
       "request": "launch",
