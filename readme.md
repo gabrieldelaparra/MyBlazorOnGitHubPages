@@ -1,5 +1,7 @@
 # How to publish a Blazor app to github pages
 
+Live at: https://gabrieldelaparra.github.io/MyBlazorOnGitHubPages/
+
 I started from these 2 tutorials:
 
 - [https://www.davideguida.com/how-to-deploy-blazor-webassembly-on-github-pages-using-github-actions/]
